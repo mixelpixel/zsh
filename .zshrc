@@ -4,7 +4,8 @@ alias fullbrush="echo • brew update 🙌 && brew update && echo • brew outda
 alias reload="exec /bin/zsh"
 alias matrix="cmatrix"
 alias router="netstat -rn |grep -o 'default.*UGSc'"
-
+# There's a better way to do this, but:
+alias hot="echo <USER_PASSWORD> | sudo -S powermetrics –samplers smc | grep 'Fan:\|CPU die temperature:\|GPU die temperature:'"
 
 # Default prompt from /etc/zshrc
 # PS1='%n@%m %1~ %# '
