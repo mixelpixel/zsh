@@ -1,9 +1,3 @@
-# PS1="%n %# "
-# e.g. mixelpix %
-
-PS1="%? %h %@ %1~ "
-# e.g. 0 1037 11:54AM /Users >
-
 alias py="python3"
 alias brewbrush="echo • brew update 🙌 && brew update && echo • brew outdated 🧐 && brew outdated && echo • brew upgrade ✨ && brew upgrade && echo • brew cleanup 🧹🧼 && brew cleanup && echo • brew doctor 🩺🩻 && brew doctor && echo • Rinse and Repeat! 💋 && echo • brew update 🙌 && brew update && echo • brew upgrade ✨ && brew upgrade && echo • brew cleanup 🧹🧼 && brew cleanup && echo • brew doctor 🩺🕺 && brew doctor && curl https://icanhazdadjoke.com"
 alias fullbrush="echo • brew update 🙌 && brew update && echo • brew outdated 🧐 && brew outdated && echo • brew upgrade ✨ && brew upgrade && echo • brew cleanup 🧹🧼 && brew cleanup && echo • brew doctor 🩺🩻 && brew doctor && echo • rustup update stable 🙌🐎 && rustup update stable && echo • solana-install update 🙌🏖🏄 This command may fail, if so use the brewbrush cmd && solana-install update && echo • Rinse and Repeat! 💋 && echo • brew update 🙌 && brew update && echo • brew upgrade ✨ && brew upgrade && echo • brew cleanup 🧹🧼 && brew cleanup && echo • brew doctor 🩺🕺 && brew doctor && echo • rustup update stable 🙌🐎 && rustup update stable && echo • solana-install update 🙌🏖🏄 && solana-install update && curl https://icanhazdadjoke.com"
@@ -11,55 +5,11 @@ alias reload="exec /bin/zsh"
 alias matrix="cmatrix"
 alias router="netstat -rn |grep -o 'default.*UGSc'"
 
-# export PATH="/usr/local/sbin:$PATH" # Has been added to /private/etc/paths
 
-# As of 7/6/2022:
-# PATH=/Users/mixelpix/.bun/bin:/Users/mixelpix/opt/anaconda3/bin:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin:/Users/mixelpix/.local/share/solana/install/active_release/bin:/Library/Apple/usr/bin:/Users/mixelpix/.cargo/bin
-#
-# ## from /etc/paths
-# /bin
-# /sbin
-# /usr/bin
-# /usr/local/bin
-# /usr/sbin
-# /Users/mixelpix/.local/share/solana/install/active_release/bin
-#
-# ## : separation
-# /Users/mixelpix/.bun/bin          <--- ~/.zshrc
-# /Users/mixelpix/opt/anaconda3/bin <--- ~/.zshrc
-# /usr/local/bin                    <--- /etc/paths
-# /usr/local/sbin                   <--- /etc/paths - per brew installing, this had been in the ~/.zshrc file
-# /bin                              <--- /etc/paths
-# /sbin                             <--- /etc/paths
-# /usr/bin                          <--- /etc/paths
-# /usr/sbin                         <--- /etc/paths
-# /Users/mixelpix/.local/share/solana/install/active_release/bin <--- /etc/paths & ~?.profile
-# /Library/Apple/usr/bin            <--- ??? Something from XCode?
-# /Users/mixelpix/.cargo/bin        <--- ~/.zshenv runs `. "$HOME/.cargo/env"` which sets path to the .cargo/bin file
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mixelpix/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mixelpix/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mixelpix/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mixelpix/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-# bun completions
-[ -s "/Users/mixelpix/.bun/_bun" ] && source "/Users/mixelpix/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="/Users/mixelpix/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# PS1="%n %# "
+# e.g. mixelpix %
+PS1="%? %h %@ %1~ "
+# e.g. 0 1037 11:54AM /Users >
 
 # `$ brew install curl`
 # ==> Caveats
@@ -91,3 +41,30 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 # setopt nomenucomplete
 
 # setopt autolist
+
+
+# export PATH="/usr/local/sbin:$PATH" # Has been added to /private/etc/paths
+
+# As of 7/6/2022:
+# PATH=/Users/mixelpix/.bun/bin:/Users/mixelpix/opt/anaconda3/bin:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin:/Users/mixelpix/.local/share/solana/install/active_release/bin:/Library/Apple/usr/bin:/Users/mixelpix/.cargo/bin
+#
+# ## from /etc/paths
+# /bin
+# /sbin
+# /usr/bin
+# /usr/local/bin
+# /usr/sbin
+# /Users/mixelpix/.local/share/solana/install/active_release/bin
+#
+# ## : separation
+# /Users/mixelpix/.bun/bin          <--- ~/.zshrc
+# /Users/mixelpix/opt/anaconda3/bin <--- ~/.zshrc
+# /usr/local/bin                    <--- /etc/paths
+# /usr/local/sbin                   <--- /etc/paths - per brew installing, this had been in the ~/.zshrc file
+# /bin                              <--- /etc/paths
+# /sbin                             <--- /etc/paths
+# /usr/bin                          <--- /etc/paths
+# /usr/sbin                         <--- /etc/paths
+# /Users/mixelpix/.local/share/solana/install/active_release/bin <--- /etc/paths & ~?.profile
+# /Library/Apple/usr/bin            <--- ??? Something from XCode?
+# /Users/mixelpix/.cargo/bin        <--- ~/.zshenv runs `. "$HOME/.cargo/env"` which sets path to the .cargo/bin file
