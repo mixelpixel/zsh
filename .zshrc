@@ -4,8 +4,20 @@ alias fullbrush="echo • brew update 🙌 && brew update && echo • brew outda
 alias reload="exec /bin/zsh"
 alias matrix="cmatrix"
 alias router="netstat -rn |grep -o 'default.*UGSc'"
-# There's a better way to do this, but:
+
+# I don't love this alias' command - Ii wish it would just update in place
 alias hot="echo <USER_PASSWORD> | sudo -S powermetrics –samplers smc | grep 'Fan:\|CPU die temperature:\|GPU die temperature:'"
+
+# `asimov` to exclude `node_modules` from Time Machine backups
+# See: https://github.com/stevegrunwell/asimov
+# ```
+# Once installed, you may instruct Homebrew to automatically load the scheduled job, ensuring Asimov is being run automatically every day:
+#
+# $ sudo brew services start asimov
+# If you don't need or want the scheduled job, you may run Asimov on-demand:
+#
+# $ asimov
+# ```
 
 # Default prompt from /etc/zshrc
 # PS1='%n@%m %1~ %# '
@@ -13,7 +25,8 @@ alias hot="echo <USER_PASSWORD> | sudo -S powermetrics –samplers smc | grep 'F
 # PS1="%n %# "
 # e.g. mixelpix %
 
-PS1='%? %h %@ %1~ >> '
+# PS1='%? %h %@ %1~ >> '
+PS1='%? %h %@ %1~ ∂ '
 # e.g.
 # 0 1037 11:54AM /Users >
 
